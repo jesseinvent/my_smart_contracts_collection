@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.0;
 
-// Contract address: 0xb862869d05cA81F7244D7f5f6EBB78f56C463762
+// Contract address: 0xA0f84C69e6B5647bFCa88F6f6eEfd5B770c283c7
 
 contract SendETHFaucet {
 
@@ -9,8 +9,8 @@ contract SendETHFaucet {
 
     // Give out ETH to anyone who asks
     function withdrawEth(uint amount) public {
-        // Limit withdrawal amount to 1Etha
-        require(amount <= 1 * 10 ** 18);
+        // Limit withdrawal amount to 0.1 ETH
+        require(amount <= 1 * 10 ** 17);
 
         // Transfer eth to whoever calls this contract
         // Make msg.sender payable 
@@ -23,7 +23,3 @@ contract SendETHFaucet {
     // Accepts any incoming eth to this contract
     receive() external payable {}
 }
-
-
-
-
